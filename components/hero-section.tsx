@@ -35,7 +35,7 @@ interface HeroSectionProps {
 export function HeroSection({
   slides = [
     {
-      title: "HOTEL & HOSPITALITY MANAGEMENT FIRM",
+      title: "HOSPITALITY MANAGEMENT FIRM",
       subtitle:
         "We provide comprehensive hospitality management solutions to help your business thrive in the competitive hospitality industry",
       image:
@@ -53,8 +53,7 @@ export function HeroSection({
       title: "PROFESSIONAL HOSPITALITY COURSES",
       subtitle:
         "Enhance your skills and advance your career with our industry-leading hospitality management courses",
-      image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/study-group-learning-library.jpg",
       cta: {
         text: "Browse Courses",
         link: "/courses",
@@ -68,8 +67,7 @@ export function HeroSection({
       title: "EXPERT CONSULTING SERVICES",
       subtitle:
         "Strategic advisory and operational expertise to optimize your hospitality business performance",
-      image:
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/top-view-people-working-with-laptops.jpg",
       cta: {
         text: "Our Services",
         link: "/services",
@@ -195,7 +193,7 @@ export function HeroSection({
           onAnimationStart={() => setIsAnimating(true)}
           onAnimationComplete={() => setIsAnimating(false)}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 dark:from-dark-primary/90 dark:to-dark-primary/70">
             <Image
               src={slides[currentSlide].image || "/placeholder.svg"}
               alt="Hero Image"
@@ -206,7 +204,7 @@ export function HeroSection({
           </div>
 
           {/* Overlay pattern */}
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10 dark:opacity-20"></div>
         </motion.div>
       </AnimatePresence>
 
@@ -220,13 +218,13 @@ export function HeroSection({
             transition={{ duration: 0.5, delay: 0.2 }}
             className="max-w-4xl"
           >
-            <Badge className="mb-6 bg-gold text-primary px-4 py-1.5 text-sm font-medium shadow-md">
+            <Badge className="mb-6 bg-gold text-primary dark:bg-dark-gold dark:text-dark-primary px-4 py-1.5 text-sm font-medium shadow-md">
               Premium Hospitality Solutions
             </Badge>
-            <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl dark:text-dark-white">
               {slides[currentSlide].title}
             </h1>
-            <p className="mb-8 max-w-2xl mx-auto text-lg text-white/90">
+            <p className="mb-8 max-w-2xl mx-auto text-lg text-white/90 dark:text-dark-white/90">
               {slides[currentSlide].subtitle}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">

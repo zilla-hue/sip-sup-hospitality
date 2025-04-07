@@ -14,7 +14,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/animated-section";
-import { TeamMember } from "@/components/team-member";
+// import { TeamMember } from "@/components/team-member";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StatsCounter } from "@/components/stats-counter";
 
@@ -264,7 +264,7 @@ export default function AboutPage() {
       <StatsCounter />
 
       {/* Leadership Team */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container px-4">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center mb-16">
@@ -386,7 +386,7 @@ export default function AboutPage() {
             </AnimatedSection>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="bg-primary py-20 text-white">
@@ -469,7 +469,7 @@ export default function AboutPage() {
       </section>
 
       {/* Partners & Clients */}
-      <section className="bg-gray-50 py-20">
+      {/* <section className="bg-gray-50 py-20">
         <div className="container px-4">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center mb-16">
@@ -510,7 +510,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-white">
@@ -598,12 +598,6 @@ export default function AboutPage() {
                 </div>
               </AnimatedSection>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button className="bg-gold hover:bg-gold/90 text-primary" asChild>
-              <Link href="/testimonials">View All Testimonials</Link>
-            </Button>
           </div>
         </div>
       </section>

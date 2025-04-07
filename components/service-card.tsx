@@ -76,7 +76,7 @@ export function ServiceCard({
 
       <CardContent className="p-6">
         <h4 className="text-lg font-semibold text-primary mb-4 flex items-center">
-          <Check className="mr-2 h-5 w-5 text-gold" />
+          {/* <Check className="mr-2 h-5 w-5 text-gold" /> */}
           Key Features
         </h4>
         <ul className="space-y-3 mb-6">

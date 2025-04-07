@@ -77,7 +77,7 @@ export function Footer() {
                 <Facebook size={20} />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/sipsup_hospitality?igsh=eXRhcXdsYWY1b2k4"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
                 aria-label="Instagram"
               >
@@ -89,13 +89,6 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
-              </Link>
-              <Link
-                href="#"
-                className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
               </Link>
             </div>
           </div>
@@ -158,17 +151,17 @@ export function Footer() {
               <li className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <span className="text-white/80">
-                  123 Hospitality Avenue, Lagos, Nigeria
+                  502 Dalaba Street, Wuse Zone 5, Abuja, Nigeria
                 </span>
               </li>
               <li className="flex items-start">
                 <Phone className="mr-3 h-5 w-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-white/80">+234 123 456 7890</span>
+                <span className="text-white/80">+234 813 800 8337</span>
               </li>
               <li className="flex items-start">
                 <Mail className="mr-3 h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <span className="text-white/80">
-                  info@sip-suphospitality.com
+                  sipsuphospitality@gmail.com
                 </span>
               </li>
             </ul>

@@ -14,140 +14,9 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection />
-
-      {/* Services Overview */}
-      {/* <section className="bg-white py-20">
-        <div className="container px-4">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4">
-                Our Expertise
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                We offer comprehensive hospitality management solutions tailored
-                to your specific needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              <div className="group rounded-xl bg-white p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-primary/5 hover:border-primary/20">
-                <div className="mb-6 rounded-full bg-primary/5 p-4 w-16 h-16 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-primary h-8 w-8"
-                  >
-                    <path
-                      d="M22 12H18L15 21L9 3L6 12H2"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">
-                  Business Operations
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Strategic business operations and management services to drive
-                  growth and efficiency.
-                </p>
-                <Link
-                  href="/services/business-operations"
-                  className="inline-flex items-center text-primary hover:text-gold transition-colors"
-                >
-                  Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-
-              <div className="group rounded-xl bg-white p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-primary/5 hover:border-primary/20">
-                <div className="mb-6 rounded-full bg-primary/5 p-4 w-16 h-16 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-primary h-8 w-8"
-                  >
-                    <path
-                      d="M12 1V23"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">
-                  HR Services
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Comprehensive HR solutions including recruitment, training and
-                  development programs.
-                </p>
-                <Link
-                  href="/services/hr-services"
-                  className="inline-flex items-center text-primary hover:text-gold transition-colors"
-                >
-                  Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-              <div className="group rounded-xl bg-white p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-primary/5 hover:border-primary/20">
-                <div className="mb-6 rounded-full bg-primary/5 p-4 w-16 h-16 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-primary h-8 w-8"
-                  >
-                    <path
-                      d="M12 1V23"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">
-                  Training & Development
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Customized training programs to enhance employee skills and
-                  organizational performance.
-                </p>
-                <Link
-                  href="/services/training-development"
-                  className="inline-flex items-center text-primary hover:text-gold transition-colors"
-                >
-                  Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section> */}
+      <div className="mt-[80px]">
+        <HeroSection />
+      </div>
 
       {/* Stats Counter */}
       <StatsCounter />
@@ -163,11 +32,11 @@ export default function Home() {
                 </h2>
                 <div className="prose max-w-none text-muted-foreground">
                   <p>
-                    SIP-SUP Hospitality is a premier hotel and hospitality
-                    management firm dedicated to providing comprehensive
-                    solutions for the hospitality industry. With years of
-                    experience and a team of seasoned professionals, we deliver
-                    exceptional results for our clients.
+                    SIP-SUP Hospitality is a premier hospitality management firm
+                    dedicated to providing comprehensive solutions for the
+                    hospitality industry. With years of experience and a team of
+                    seasoned professionals, we deliver exceptional results for
+                    our clients.
                   </p>
                   <p>
                     Our approach combines industry best practices with
@@ -183,13 +52,19 @@ export default function Home() {
                     the expertise to help you achieve your goals.
                   </p>
                 </div>
-                <Button className="mt-6 bg-gold hover:bg-gold/90 text-primary">
-                  Learn More <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href="/about">
+                  <Button
+                    className="mt-6 bg-gold hover:bg-gold/90 text-primary shadow-lg text-base px-8
+                  group"
+                  >
+                    Learn More{" "}
+                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
               <div className="relative h-[400px] overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/young-african-american-waiter-man-hold-tray-with-burger-restaurant.jpg"
                   alt="Hospitality Business Meeting"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -216,48 +91,48 @@ export default function Home() {
             </p>
           </AnimatedSection>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-3">
             <AnimatedSection delay={0.1}>
               <ServiceCard
-                title="Business Operations & Management"
-                description="Comprehensive operational management to optimize performance and profitability."
-                image="/images/business-operations.jpg"
+                title="Consulting"
+                description="Strategic advisory and operational expertise to optimize your hospitality business performance."
+                image="/images/african-american-man-woman-sits-stylish-home-office.jpg"
                 features={[
-                  "Standard Operating Procedures Development",
-                  "Revenue Management and Optimization",
-                  "Quality Assurance and Service Excellence",
-                  "Cost Control and Efficiency Improvement",
-                  "Performance Monitoring and Reporting",
+                  "Business Strategy Development",
+                  "Operational Efficiency Analysis",
+                  "Revenue Management Optimization",
+                  "Quality Assurance Systems",
+                  "Performance Monitoring & Reporting",
+                ]}
+              />
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <ServiceCard
+                title="Recruitment"
+                description="Specialized talent acquisition services for the hospitality industry."
+                image="/images/manager-women-working-hiring-application-discussing-curriculum-vitae-with-remote-recruiter-online-videocall-meeting-conference-startup-office-teleconference-call-computer-screen.jpg"
+                features={[
+                  "Executive Search & Placement",
+                  "Hospitality Staff Recruitment",
+                  "Candidate Assessment & Screening",
+                  "Temporary & Permanent Staffing",
+                  "Employer Branding Strategies",
                 ]}
               />
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
               <ServiceCard
-                title="HR Services"
-                description="Comprehensive human resources solutions for the hospitality industry."
-                image="/images/hr-services.jpg"
-                features={[
-                  "Recruitment and Talent Acquisition",
-                  "Training and Development Programs",
-                  "Performance Management Systems",
-                  "Employee Relations and Engagement",
-                  "Compliance and Policy Development",
-                ]}
-              />
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.4}>
-              <ServiceCard
-                title="Training, Mentoring & Coaching"
+                title="Training"
                 description="Professional development programs to enhance skills and service quality."
-                image="/images/training.jpg"
+                image="/images/beginner-average-skilled-expert-productivity.jpg"
                 features={[
-                  "Customer Service Excellence Training",
-                  "Leadership Development Programs",
+                  "Customer Service Excellence",
+                  "Leadership Development",
                   "Operational Skills Training",
-                  "Mentoring for Management Teams",
-                  "Customized Training Solutions",
+                  "Customized Training Programs",
+                  "Mentoring & Coaching Services",
                 ]}
               />
             </AnimatedSection>
@@ -282,15 +157,15 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <MapPin className="mr-4 h-6 w-6 text-gold" />
-                      <p>123 Hospitality Avenue, Lagos, Nigeria</p>
+                      <p>502 Dalaba Street, Wuse Zone 5, Abuja, Nigeria</p>
                     </div>
                     <div className="flex items-start">
                       <Phone className="mr-4 h-6 w-6 text-gold" />
-                      <p>+234 123 456 7890</p>
+                      <p>+234 813 800 8337</p>
                     </div>
                     <div className="flex items-start">
                       <Mail className="mr-4 h-6 w-6 text-gold" />
-                      <p>info@sip-suphospitality.com</p>
+                      <p>sipsuphospitality@gmail.com</p>
                     </div>
                   </div>
                   <div className="mt-8">
@@ -345,7 +220,7 @@ export default function Home() {
                   </div>
                   <div className="overflow-hidden rounded-lg">
                     <Image
-                      src="https://images.unsplash.com/photo-1590073242678-70ee3fc28f8e?q=80&w=2121&auto=format&fit=crop"
+                      src="/images/chef-cooking-kitchen-while-wearing-professional-attire.jpg"
                       alt="Hospitality Career"
                       width={300}
                       height={300}
@@ -373,9 +248,12 @@ export default function Home() {
                     delivery.
                   </p>
                 </div>
-                <Button className="mt-6 bg-gold hover:bg-gold/90 text-primary">
-                  Join Our Team <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href="/careers">
+                  <Button className="mt-6 bg-gold hover:bg-gold/90 text-primary group">
+                    Join Our Team{" "}
+                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </AnimatedSection>
@@ -383,7 +261,18 @@ export default function Home() {
       </section>
 
       {/* Courses Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 relative">
+        {/* Coming Soon Overlay */}
+        <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center">
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              Coming Soon
+            </h3>
+            <p className="text-white/90 text-lg max-w-md mx-auto">
+              Our professional courses will be available shortly
+            </p>
+          </div>
+        </div>
         <div className="container px-4">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
@@ -563,16 +452,21 @@ export default function Home() {
         <div className="container px-4 text-center">
           <AnimatedSection>
             <h2 className="mb-6 text-3xl font-bold">
-              Join That Align With Your Skills
+              Join Roles That Align With Your Skills
             </h2>
             <p className="mx-auto mb-8 max-w-2xl">
               Take your hospitality career to the next level with SIP-SUP
               Hospitality. We offer exciting opportunities for professionals who
               are passionate about delivering exceptional service.
             </p>
-            <Button size="lg" className="bg-gold hover:bg-gold/90 text-primary">
-              Apply Now
-            </Button>
+            <Link href="/careers">
+              <Button
+                size="lg"
+                className="bg-gold hover:bg-gold/90 text-primary"
+              >
+                Apply Now
+              </Button>
+            </Link>
           </AnimatedSection>
         </div>
       </section>
@@ -604,7 +498,7 @@ export default function Home() {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/sipsup_hospitality?igsh=eXRhcXdsYWY1b2k4"
               className="rounded-full bg-primary p-3 text-white transition-transform hover:scale-110"
             >
               <svg

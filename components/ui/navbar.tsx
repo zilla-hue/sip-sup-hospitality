@@ -97,7 +97,7 @@ export function Navbar() {
             >
               Careers
             </Link>
-            <Link
+            {/* <Link
               href="/courses"
               className={cn(
                 "font-medium transition-colors hover:text-gold",
@@ -105,7 +105,7 @@ export function Navbar() {
               )}
             >
               Courses
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <Button className="bg-gold hover:bg-gold/90 text-primary mr-2">
                 Get Started
@@ -177,13 +177,13 @@ export function Navbar() {
               >
                 Careers
               </Link>
-              <Link
+              {/* <Link
                 href="/courses"
                 className="font-medium text-primary py-2 border-b border-gray-100"
                 onClick={() => setIsOpen(false)}
               >
                 Courses
-              </Link>
+              </Link> */}
               <div className="flex space-x-2">
                 <Link href="/contact">
                   <Button className="bg-gold hover:bg-gold/90 text-primary w-full">

@@ -46,9 +46,9 @@ export default function ContactPage() {
                     Visit Us
                   </h3>
                   <p className="text-muted-foreground">
-                    123 Hospitality Avenue
+                    502 Dalaba Street, Wuse Zone 5
                   </p>
-                  <p className="text-muted-foreground">Lagos, Nigeria</p>
+                  <p className="text-muted-foreground">Abuja, Nigeria</p>
                   <Button
                     variant="link"
                     className="mt-2 text-primary hover:text-gold"
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   <h3 className="mb-2 text-xl font-bold text-primary">
                     Call Us
                   </h3>
-                  <p className="text-muted-foreground">+234 123 456 7890</p>
+                  <p className="text-muted-foreground">+234 813 800 8337</p>
                   <p className="text-muted-foreground">Mon-Fri: 8am - 6pm</p>
                   <Button
                     variant="link"
@@ -86,10 +86,7 @@ export default function ContactPage() {
                     Email Us
                   </h3>
                   <p className="text-muted-foreground">
-                    info@sip-suphospitality.com
-                  </p>
-                  <p className="text-muted-foreground">
-                    support@sip-suphospitality.com
+                    sipsuphospitality@gmail.com
                   </p>
                   <Button
                     variant="link"
@@ -118,7 +115,7 @@ export default function ContactPage() {
               <div className="overflow-hidden rounded-lg shadow-lg">
                 <div className="relative h-full w-full min-h-[400px] bg-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45932537!2d3.1191205!3d6.5483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1648138100000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.9935516290016!2d7.455510575077938!3d9.064350890998403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b218bfd420b%3A0xa82e7b96bc041c17!2s502%20Dalaba%20St%2C%20Wuse%2C%20Abuja%20900285%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1743873580306!5m2!1sen!2sng"
                     width="100%"
                     height="100%"
                     style={{

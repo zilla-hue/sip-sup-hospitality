@@ -61,14 +61,14 @@ export default function ServicesPage() {
           <div className="mt-12 grid gap-12">
             <AnimatedSection>
               <ServiceDetailCard
-                title="Business Operations & Management"
-                description="Our business operations and management services focus on optimizing all aspects of your hospitality business to enhance guest satisfaction, improve operational efficiency, and maximize profitability. We implement proven systems and processes tailored to your specific needs."
-                image="/images/business-operations.jpg"
+                title="Consulting"
+                description="Our consulting services provide strategic advisory and operational expertise to optimize your hospitality business performance. We work closely with your team to identify opportunities for improvement and implement effective solutions that drive results."
+                image="/images/african-american-man-woman-sits-stylish-home-office.jpg"
                 features={[
-                  "Standard Operating Procedures Development",
-                  "Revenue Management & Optimization",
-                  "Quality Assurance & Service Excellence",
-                  "Cost Control & Efficiency Improvement",
+                  "Business Strategy Development",
+                  "Operational Efficiency Analysis",
+                  "Revenue Management Optimization",
+                  "Quality Assurance Systems",
                   "Performance Monitoring & Reporting",
                   "Crisis Management & Business Continuity",
                 ]}
@@ -88,25 +88,52 @@ export default function ServicesPage() {
 
             <AnimatedSection>
               <ServiceDetailCard
-                title="HR Services"
-                description="Our HR services focus on building and maintaining a talented, motivated workforce for your hospitality business. We provide comprehensive solutions for recruitment, training, performance management, and employee engagement."
-                image="/images/hr-services.jpg"
+                title="Recruitment"
+                description="Our specialized talent acquisition services help hospitality businesses find and retain the best talent in the industry. We understand the unique staffing challenges in hospitality and provide tailored recruitment solutions to meet your specific needs."
+                image="/images/manager-women-working-hiring-application-discussing-curriculum-vitae-with-remote-recruiter-online-videocall-meeting-conference-startup-office-teleconference-call-computer-screen.jpg"
                 features={[
-                  "Recruitment & Talent Acquisition",
-                  "Training & Development Programs",
-                  "Performance Management Systems",
-                  "Employee Relations & Engagement",
-                  "Compliance & Policy Development",
-                  "Succession Planning & Leadership Development",
+                  "Executive Search & Placement",
+                  "Hospitality Staff Recruitment",
+                  "Candidate Assessment & Screening",
+                  "Temporary & Permanent Staffing",
+                  "Employer Branding Strategies",
+                  "Succession Planning",
                 ]}
                 caseStudy={{
                   title: "Hotel Chain Staff Retention Improvement",
                   description:
-                    "We implemented a comprehensive HR transformation for a hotel chain struggling with high staff turnover. By redesigning recruitment processes, implementing structured training programs, and creating clear career paths, we reduced staff turnover by 40% and improved employee satisfaction scores significantly.",
+                    "We implemented a comprehensive recruitment transformation for a hotel chain struggling with high staff turnover. By redesigning recruitment processes, implementing structured screening procedures, and creating clear career paths, we reduced staff turnover by 40% and improved employee satisfaction scores significantly.",
                   metrics: [
                     { label: "Staff Turnover Reduction", value: "40%" },
-                    { label: "Training Completion", value: "95%" },
+                    { label: "Successful Placements", value: "95%" },
                     { label: "Employee Satisfaction", value: "+52%" },
+                  ],
+                }}
+                reversed
+              />
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <ServiceDetailCard
+                title="Training"
+                description="Our professional development programs enhance skills and service quality across all levels of your hospitality organization. We deliver customized training solutions that address your specific needs and help your team deliver exceptional guest experiences."
+                image="/images/beginner-average-skilled-expert-productivity.jpg"
+                features={[
+                  "Customer Service Excellence",
+                  "Leadership Development",
+                  "Operational Skills Training",
+                  "Customized Training Programs",
+                  "Mentoring & Coaching Services",
+                  "Performance Improvement Workshops",
+                ]}
+                caseStudy={{
+                  title: "Luxury Resort Service Transformation",
+                  description:
+                    "We developed and implemented a comprehensive training program for a luxury resort struggling with inconsistent service quality. Our customized approach included service excellence workshops, leadership coaching, and operational skills training, resulting in significant improvements in guest satisfaction and staff performance.",
+                  metrics: [
+                    { label: "Guest Satisfaction", value: "+45%" },
+                    { label: "Staff Performance", value: "+38%" },
+                    { label: "Repeat Bookings", value: "+27%" },
                   ],
                 }}
                 reversed
