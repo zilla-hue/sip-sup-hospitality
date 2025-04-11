@@ -4,7 +4,17 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { CalendarIcon, CheckCircle, Loader2 } from "lucide-react";
+import {
+  CalendarIcon,
+  CheckCircle,
+  Loader2,
+  User,
+  Mail,
+  Phone,
+  Building,
+  MessageSquare,
+  Clock,
+} from "lucide-react";
 import { format } from "date-fns";
 
 import { Button } from "@/components/ui/button";
@@ -34,6 +44,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { AnimatedSection } from "@/components/animated-section";
+import { toast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -92,6 +103,10 @@ export default function BookConsultationPage() {
       console.log(values);
       setIsSubmitting(false);
       setIsSuccess(true);
+      toast({
+        title: "Consultation Scheduled!",
+        description: "We'll confirm your appointment shortly via email.",
+      });
     }, 2000);
   }
 
@@ -182,9 +197,20 @@ export default function BookConsultationPage() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Name</FormLabel>
+                            <FormLabel className="text-primary font-medium flex items-center">
+                              <User className="h-4 w-4 mr-2 text-primary/70" />
+                              Name
+                            </FormLabel>
                             <FormControl>
-                              <Input placeholder="Your full name" {...field} />
+                              <Input
+                                placeholder="Your full name"
+                                {...field}
+                                className={cn(
+                                  "border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all",
+                                  "rounded-md shadow-sm",
+                                  "placeholder:text-muted-foreground/60"
+                                )}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -195,12 +221,20 @@ export default function BookConsultationPage() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel className="text-primary font-medium flex items-center">
+                              <Mail className="h-4 w-4 mr-2 text-primary/70" />
+                              Email
+                            </FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="Your email address"
                                 type="email"
                                 {...field}
+                                className={cn(
+                                  "border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all",
+                                  "rounded-md shadow-sm",
+                                  "placeholder:text-muted-foreground/60"
+                                )}
                               />
                             </FormControl>
                             <FormMessage />
@@ -212,11 +246,19 @@ export default function BookConsultationPage() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Phone</FormLabel>
+                            <FormLabel className="text-primary font-medium flex items-center">
+                              <Phone className="h-4 w-4 mr-2 text-primary/70" />
+                              Phone
+                            </FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="Your phone number"
                                 {...field}
+                                className={cn(
+                                  "border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all",
+                                  "rounded-md shadow-sm",
+                                  "placeholder:text-muted-foreground/60"
+                                )}
                               />
                             </FormControl>
                             <FormMessage />
@@ -228,11 +270,19 @@ export default function BookConsultationPage() {
                         name="company"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Company (Optional)</FormLabel>
+                            <FormLabel className="text-primary font-medium flex items-center">
+                              <Building className="h-4 w-4 mr-2 text-primary/70" />
+                              Company (Optional)
+                            </FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="Your company name"
                                 {...field}
+                                className={cn(
+                                  "border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all",
+                                  "rounded-md shadow-sm",
+                                  "placeholder:text-muted-foreground/60"
+                                )}
                               />
                             </FormControl>
                             <FormMessage />
@@ -246,13 +296,16 @@ export default function BookConsultationPage() {
                       name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Service</FormLabel>
+                          <FormLabel className="text-primary font-medium flex items-center">
+                            <Building className="h-4 w-4 mr-2 text-primary/70" />
+                            Service
+                          </FormLabel>
                           <Select
                             onValueChange={field.onChange}
                             defaultValue={field.value}
                           >
                             <FormControl>
-                              <SelectTrigger>
+                              <SelectTrigger className="border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>

@@ -13,6 +13,8 @@ const inter = Inter({
   variable: "--font-sans",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
+  preload: false, // Disable preloading to prevent abort errors
+  fallback: ["system-ui", "arial"], // Provide fallback fonts
 });
 
 export const metadata: Metadata = {

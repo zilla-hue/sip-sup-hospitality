@@ -59,7 +59,10 @@ export function JobListing({
             className="hidden md:inline-flex"
             onClick={(e) => {
               e.stopPropagation();
-              window.open("/apply", "_blank");
+              window.open(
+                `/apply?position=${encodeURIComponent(title)}`,
+                "_blank"
+              );
             }}
           >
             Apply Now
@@ -110,10 +113,28 @@ export function JobListing({
                 </ul>
               </div>
 
-              <Button className="w-full md:hidden bg-gold hover:bg-gold/90 text-primary">
+              <Button
+                className="w-full md:hidden bg-gold hover:bg-gold/90 text-primary"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(
+                    `/apply?position=${encodeURIComponent(title)}`,
+                    "_blank"
+                  );
+                }}
+              >
                 Apply Now
               </Button>
-              <Button className="hidden md:block bg-gold hover:bg-gold/90 text-primary">
+              <Button
+                className="hidden md:block bg-gold hover:bg-gold/90 text-primary"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(
+                    `/apply?position=${encodeURIComponent(title)}`,
+                    "_blank"
+                  );
+                }}
+              >
                 Apply for this position
               </Button>
             </div>

@@ -54,7 +54,18 @@ export default function CoursesPage() {
       </section>
 
       {/* Featured Courses */}
-      <section className="py-16">
+      <section className="py-16 relative">
+        {/* Coming Soon Overlay */}
+        <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center">
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              Coming Soon
+            </h3>
+            <p className="text-white/90 text-lg max-w-md mx-auto">
+              Our professional courses will be available shortly
+            </p>
+          </div>
+        </div>
         <div className="container px-4">
           <AnimatedSection>
             <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -151,7 +162,18 @@ export default function CoursesPage() {
       </section>
 
       {/* Course Categories */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16 relative">
+        {/* Coming Soon Overlay */}
+        <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center">
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              Coming Soon
+            </h3>
+            <p className="text-white/90 text-lg max-w-md mx-auto">
+              Our professional courses will be available shortly
+            </p>
+          </div>
+        </div>
         <div className="container px-4">
           <AnimatedSection>
             <h2 className="mb-2 text-center text-3xl font-bold text-primary">
@@ -253,7 +275,18 @@ export default function CoursesPage() {
       </section>
 
       {/* All Courses */}
-      <section className="py-16">
+      <section className="py-16 relative">
+        {/* Coming Soon Overlay */}
+        <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center">
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              Coming Soon
+            </h3>
+            <p className="text-white/90 text-lg max-w-md mx-auto">
+              Our professional courses will be available shortly
+            </p>
+          </div>
+        </div>
         <div className="container px-4">
           <AnimatedSection>
             <h2 className="mb-2 text-center text-3xl font-bold text-primary">
@@ -365,7 +398,9 @@ export default function CoursesPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16 relative">
+        {/* Coming Soon Overlay */}
+        <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center"></div>
         <div className="container px-4">
           <AnimatedSection>
             <h2 className="mb-2 text-center text-3xl font-bold text-primary">
