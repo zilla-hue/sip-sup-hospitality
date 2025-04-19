@@ -18,11 +18,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SIP-SUP Hospitality - Hotel & Hospitality Management Firm",
+  title: "SIP-SUP Hospitality - Hospitality Management Firm",
   description:
-    "Professional hotel and hospitality management solutions to help your business thrive in the competitive hospitality industry.",
+    "Professional hospitality management solutions to help your business thrive in the competitive hospitality industry.",
   keywords:
-    "hospitality management, hotel management, hospitality courses, hospitality consulting",
+    "hospitality recruitment, hospitality courses, hospitality consulting, hospitality training",
   authors: [{ name: "SIP-SUP Hospitality" }],
   viewport: "width=device-width, initial-scale=1",
   icons: {
