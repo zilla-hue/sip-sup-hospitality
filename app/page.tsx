@@ -174,7 +174,7 @@ export default function Home() {
                       alt="SIP-SUP Hospitality Logo"
                       width={120}
                       height={120}
-                      className="mx-auto"
+                      className="mx-auto h-auto"
                     />
                   </div>
                 </div>

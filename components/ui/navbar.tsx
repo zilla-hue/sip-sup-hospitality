@@ -47,7 +47,7 @@ export function Navbar() {
               alt="SIP-SUP Hospitality"
               width={60}
               height={60}
-              className="mr-2"
+              className="mr-2 h-auto"
             />
             <span
               className={cn(

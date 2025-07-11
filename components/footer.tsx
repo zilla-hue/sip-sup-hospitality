@@ -60,7 +60,7 @@ export function Footer() {
                 alt="SIP-SUP Hospitality Logo"
                 width={60}
                 height={60}
-                className="mr-3"
+                className="mr-3 h-auto"
               />
               <span className="text-xl font-bold">SIP-SUP Hospitality</span>
             </div>

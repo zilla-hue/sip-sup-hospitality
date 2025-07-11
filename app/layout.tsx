@@ -36,7 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <link rel="canonical" href="https://sipsuphospitality.com/" />
+      </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <ThemeProvider
           attribute="class"

@@ -204,7 +204,7 @@ export function HeroSection({
           </div>
 
           {/* Overlay pattern */}
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10 dark:opacity-20"></div>
+          
         </motion.div>
       </AnimatePresence>
 
