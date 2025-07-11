@@ -25,27 +25,27 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Zarah",
     role: "General Manager",
     company: "Luxury Resort & Spa",
     content:
-      "SIP-SUP Hospitality transformed our operations completely. Their expertise in hotel management helped us increase our occupancy rates by 30% and significantly improve guest satisfaction scores. The team's attention to detail and commitment to excellence is unmatched in the industry.",
-    image: "https://randomuser.me/api/portraits/women/32.jpg",
+      "Attending the hospitality workshop was an incredibly enriching experience. The session was well-structured, with theoretical knowledge that gave real insight into the industry. The facilitator (miss Ruth) is not only highly knowledgeable but also approachable and genuinely passionate about hospitality, which made learning both engaging and inspiring. I particularly appreciated the emphasis on customer service excellence, attention to detail, and effective communication skills — all of which are crucial in creating memorable guest experiences. The workshop also provided valuable networking opportunities with peers who share the same passion for the hospitality field. Thanks to the workshop, I feel more confident  and better prepared to deliver outstanding service in any hospitality setting. I will highly recommend this program in futureto anyone looking to enhance their knowledge and build a strong foundation for a successful career in hospitality.",
+    image: "/images/testimonial-4.jpeg",
     rating: 5,
     location: "Lagos, Nigeria",
     projectType: "Hotel Management",
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Hannah",
     role: "Owner",
     company: "Boutique Hotel Group",
     content:
-      "Working with SIP-SUP has been a game-changer for our boutique hotels. Their financial advisory services helped us optimize our revenue streams and reduce operational costs without compromising on quality. I highly recommend their services to any hospitality business looking to improve performance.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+      "My name is Hannah, and these are my few takeaways from the Elevate Your Hospitality Career workshop:I learned that first impressions matter a lot and that they represent not just me but the organization or brand I stand for. I also learned that my approach will determine whether people are encouraged to move forward with their goals. One key lesson that stood out to me is that we should treat people simply because they are people, not based on their worth. How we treat others can trigger positive responses and bring out the best in them. I’m grateful for the opportunity to learn and grow through this experience.",
+    image: "/images/testimonial-3.jpeg",
     rating: 4.8,
-    location: "Accra, Ghana",
-    projectType: "Financial Advisory",
+    location: "Abuja, Nigeria",
+    projectType: "Training & Development",
   },
   {
     id: 3,
@@ -53,10 +53,10 @@ const testimonials: Testimonial[] = [
     role: "HR Director",
     company: "Grand Hotel Chain",
     content:
-      "The training programs developed by SIP-SUP Hospitality have significantly improved our staff performance and retention. Their people-focused approach has created a positive work environment that translates to exceptional guest experiences. We've seen a 25% reduction in staff turnover since implementing their recommendations.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+      "The hospitality workshop exceeded my expectations, The interactive sessions and real-life examples helped me understand the importance of empathy and personalization in service delivery. Thank you for investing in our growth My take home from the workshop is “I AM SORRY” should be your go to word in the hospitality industry.",
+    image: "/images/testimonial-2.jpeg",
     rating: 4.9,
-    location: "Nairobi, Kenya",
+    location: "Abuja, Nigeria",
     projectType: "Training & Development",
   },
   {
@@ -65,8 +65,8 @@ const testimonials: Testimonial[] = [
     role: "CEO",
     company: "Sunset Resorts",
     content:
-      "SIP-SUP Hospitality's marketing strategies revolutionized our approach to guest acquisition. Their digital marketing team helped us increase direct bookings by 45% and reduce our dependency on OTAs. The ROI on their services has been exceptional, and we continue to see growth in our market share.",
-    image: "https://randomuser.me/api/portraits/men/22.jpg",
+      "ENHANCE YOUR HOSPITALITY CAREER workshop was a real eye-opener. I'm a graphic designer, but what stuck with me was the emphasis on treating people right. It's funny, I used to think my job was just about making things look good, but now I see how much of an impact good customer service can have on a project's success. Thanks to the insights from the workshop, I'm already thinking about how I can apply those principles to my own work, from how I communicate with clients to how I handle feedback. It's not just about designing something pretty; it's about building relationships and delivering experiences that exceed expectations.",
+    image: "/images/testimonial-1.jpeg",
     rating: 5,
     location: "Abuja, Nigeria",
     projectType: "Marketing Services",

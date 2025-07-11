@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useEffect, useState, useRef } from "react";
 import { useInView } from "framer-motion";
 import {
@@ -32,7 +31,7 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    icon: <Building className="h-10 w-10" />,
+    icon: <Building className="h-8 w-8 md:h-10 md:w-10" />,
     value: 150,
     label: "Hotels Managed",
     suffix: "+",
@@ -41,7 +40,7 @@ const stats: Stat[] = [
     description: "Across 15 African countries",
   },
   {
-    icon: <Users className="h-10 w-10" />,
+    icon: <Users className="h-8 w-8 md:h-10 md:w-10" />,
     value: 2500,
     label: "Professionals Trained",
     suffix: "+",
@@ -50,7 +49,7 @@ const stats: Stat[] = [
     description: "Through our hospitality programs",
   },
   {
-    icon: <Award className="h-10 w-10" />,
+    icon: <Award className="h-8 w-8 md:h-10 md:w-10" />,
     value: 25,
     label: "Years of Experience",
     suffix: "+",
@@ -59,7 +58,7 @@ const stats: Stat[] = [
     description: "In hospitality management",
   },
   {
-    icon: <Globe className="h-10 w-10" />,
+    icon: <Globe className="h-8 w-8 md:h-10 md:w-10" />,
     value: 15,
     label: "Countries",
     color: "bg-green-50 text-green-600",
@@ -67,7 +66,7 @@ const stats: Stat[] = [
     description: "With active operations",
   },
   {
-    icon: <TrendingUp className="h-10 w-10" />,
+    icon: <TrendingUp className="h-8 w-8 md:h-10 md:w-10" />,
     value: 40,
     prefix: "+",
     label: "Revenue Growth",
@@ -77,7 +76,7 @@ const stats: Stat[] = [
     description: "Average for our clients",
   },
   {
-    icon: <Star className="h-10 w-10" />,
+    icon: <Star className="h-8 w-8 md:h-10 md:w-10" />,
     value: 98,
     label: "Client Satisfaction",
     suffix: "%",
@@ -86,7 +85,7 @@ const stats: Stat[] = [
     description: "Based on client surveys",
   },
   {
-    icon: <Briefcase className="h-10 w-10" />,
+    icon: <Briefcase className="h-8 w-8 md:h-10 md:w-10" />,
     value: 300,
     label: "Projects Completed",
     suffix: "+",
@@ -95,7 +94,7 @@ const stats: Stat[] = [
     description: "Across all service areas",
   },
   {
-    icon: <Clock className="h-10 w-10" />,
+    icon: <Clock className="h-8 w-8 md:h-10 md:w-10" />,
     value: 24,
     label: "Support Hours",
     suffix: "/7",
@@ -105,55 +104,65 @@ const stats: Stat[] = [
   },
 ];
 
-export function StatsCounter() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const [counters, setCounters] = useState<number[]>(stats.map(() => 0));
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+const Counter = ({
+  value,
+  duration,
+  isInView,
+}: {
+  value: number;
+  duration: number;
+  isInView: boolean;
+}) => {
+  const [count, setCount] = useState(0);
+  const animationFrameRef = useRef<number>();
 
   useEffect(() => {
     if (!isInView) return;
 
-    const intervals = stats.map((stat, index) => {
-      const duration = stat.duration || 2000; // Default 2 seconds if not specified
-      const steps = 30;
-      const increment = stat.value / steps;
-      let count = 0;
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * value));
 
-      return setInterval(() => {
-        count += increment;
-        if (count >= stat.value) {
-          count = stat.value;
-          clearInterval(intervals[index]);
-        }
+      if (progress < 1) {
+        animationFrameRef.current = requestAnimationFrame(step);
+      }
+    };
 
-        setCounters((prev) => {
-          const newCounters = [...prev];
-          newCounters[index] = Math.floor(count);
-          return newCounters;
-        });
-      }, duration / steps);
-    });
+    animationFrameRef.current = requestAnimationFrame(step);
 
     return () => {
-      intervals.forEach((interval) => clearInterval(interval));
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
-  }, [isInView]);
+  }, [isInView, value, duration]);
+
+  return <span className="tabular-nums">{count.toLocaleString()}</span>;
+};
+
+export function StatsCounter() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="container px-4">
+    <section ref={ref} className="py-16 md:py-24 bg-white">
+      <div className="container px-4 mx-auto">
         <AnimatedSection>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-4">Our Impact</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Our Impact
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
               We've helped hospitality businesses across Africa achieve
               remarkable results
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-8">
           {stats.map((stat, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
               <Card
@@ -164,42 +173,35 @@ export function StatsCounter() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <CardContent className="flex flex-col items-center p-8 text-center relative h-full">
-                  {/* Decorative background element */}
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-500"></div>
-
+                <CardContent className="flex flex-col items-center p-4 md:p-8 text-center relative h-full">
                   <div
                     className={cn(
-                      `mb-6 rounded-full ${stat.color} p-5 relative z-10 group-hover:scale-110 transition-transform duration-300`,
+                      `mb-4 rounded-full ${stat.color} p-4 md:p-5 relative z-10 group-hover:scale-110 transition-transform duration-300`,
                       hoveredIndex === index && "animate-pulse"
                     )}
                   >
                     {stat.icon}
                   </div>
 
-                  <div className="text-4xl font-bold text-primary mb-2 flex items-center justify-center">
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2 flex items-center justify-center">
                     {stat.prefix && <span>{stat.prefix}</span>}
-                    <span className="tabular-nums">
-                      {counters[index].toLocaleString()}
-                    </span>
+                    <Counter
+                      value={stat.value}
+                      duration={stat.duration || 2000}
+                      isInView={isInView}
+                    />
                     {stat.suffix && <span>{stat.suffix}</span>}
                   </div>
 
-                  <div className="text-muted-foreground font-medium mb-2">
+                  <div className="text-sm md:text-base text-muted-foreground font-medium mb-2">
                     {stat.label}
                   </div>
 
                   {stat.description && (
-                    <div className="text-xs text-muted-foreground mt-1">
+                    <div className="text-xs text-muted-foreground mt-1 hidden sm:block">
                       {stat.description}
                     </div>
                   )}
-
-                  {/* Bottom decorative element */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-primary/10 w-full transform -translate-y-2 group-hover:bg-primary/20 transition-colors duration-300"></div>
-
-                  {/* Animated progress bar */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-primary w-0 group-hover:w-full transition-all duration-1000 ease-out"></div>
                 </CardContent>
               </Card>
             </AnimatedSection>
